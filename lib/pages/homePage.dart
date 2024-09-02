@@ -34,7 +34,7 @@ class HomePage extends StatelessWidget {
                   child: TextField(
                     decoration: InputDecoration(
                       hintText: 'Search',
-                      prefixIcon: Icon(Icons.search),
+                      prefixIcon: const Icon(Icons.search),
                       border: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(30.0),
                         borderSide: BorderSide.none,
@@ -76,13 +76,13 @@ class HomePage extends StatelessWidget {
             const SizedBox(height: 20),
             ElevatedButton(
               onPressed: () {},
-              child: const Text('Liste des tickets'),
               style: ElevatedButton.styleFrom(
                 backgroundColor: Colors.blue,
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(30.0),
                 ),
               ),
+              child: const Text('Liste des tickets'),
             ),
           ],
         ),
@@ -101,7 +101,7 @@ class HomePage extends StatelessWidget {
               icon: const Icon(Icons.message),
               onPressed: () {},
             ),
-            SizedBox(width: 40), // Espacement pour le bouton central
+            const SizedBox(width: 40), // Espacement pour le bouton central
             IconButton(
               icon: const Icon(Icons.notifications),
               onPressed: () {},
