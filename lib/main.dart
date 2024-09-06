@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-// import 'package:flutter_application_1/pages/ProfilPage.dart';
-// import 'package:flutter_application_1/pages/TicketListPage.dart';
-// import 'package:flutter_application_1/pages/TicketPage.dart';
-import 'package:flutter_application_1/pages/connexion.dart';
-// import 'package:flutter_application_1/pages/homePage.dart';
 import 'package:firebase_core/firebase_core.dart';
+import 'package:flutter_application_1/pages/admin/formateur.dart';
+import 'package:flutter_application_1/pages/admin/formulaire.apprenant.dart';
+import 'package:flutter_application_1/pages/admin/formulaire.formateur.dart';
+import 'package:flutter_application_1/pages/admin/homeDashboard.dart';
+import 'package:flutter_application_1/pages/admin/settings.dart';
 import 'firebase_options.dart';
 
 void main() async {
@@ -22,18 +22,18 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
 
-      // routes: {
-      //   '/': (context) => const HomePage(),
-      //   '/profil': (context) => UserProfilePage(),
-      //   '/Liste': (context) =>  const TicketListPage(),
-      //   '/ticket': (context) =>  TicketFormPage(),
-
-      // },
+      routes: {
+        '/': (context) =>  const HomeDash(),
+        '/formateur': (context) => const Formateur(),
+        '/settings': (context) =>   const Settings(),
+        '/form-apprenant': (context) => const FormApprenant(),
+        '/form-formateur': (context) => const FormFormateur()
+      },
       debugShowCheckedModeBanner: false,
 
-      home: Connexion(),
+      // home: const HomeDash(),
     );
   }
 }
